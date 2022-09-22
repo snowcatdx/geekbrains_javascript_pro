@@ -10,13 +10,34 @@
 
 <body>
     <header>
-        <button class="btn-cart" type="button">Корзина</button>
+        <div class="cart-preview">
+            <button class="btn-cart" type="button">
+                <span class="btn-cart_counter"></span>
+                <span>Корзина</span>
+            </button>
+            <div class="cart-preview_content">
+                <span class="total-sum">Итого: <span class="total-sum_value"></span></span>
+            </div>
+        </div>
     </header>
     <main>
         <div class="products"></div>
     </main>
     <script src="js/main.js"></script>
-    <script src="js/hamburger.js"></script>
+<!--    <script src="js/hamburger.js"></script>-->
+    <script>
+        document.querySelector('.btn-cart').addEventListener('click', event => {
+            event.target.classList.toggle('active');
+            event.target.closest('.cart-preview').classList.toggle('visible');
+
+            if(event.target.classList.contains('active')) {
+                event.target.textContent = 'Закрыть';
+            } else {
+                event.target.textContent = 'Корзина';
+            }
+        });
+
+    </script>
 </body>
 
 </html>

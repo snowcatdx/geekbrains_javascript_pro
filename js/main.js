@@ -1,19 +1,26 @@
+const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+
 class ProductList {
   constructor(container = '.products'){
     this.container = container;
-    this.goods = [];
-    this._fetchProducts();//рекомендация, чтобы метод был вызван в текущем классе
-    this.render();//вывод товаров на страницу
+    this.goods = [];//массив товаров из JSON документа
+    this._getProducts()
+        .then(data => { //data - объект js
+          //console.log(data);
+        this.goods = data;
+        this.render();//вывод товаров на страницу
+    });
   }
-  _fetchProducts(){
-    this.goods = [
-      {id: 1, title: 'Notebook', price: 2000},
-      {id: 2, title: 'Mouse', price: 20},
-      {id: 3, title: 'Keyboard', price: 200},
-      {id: 4, title: 'Gamepad', price: 50},
-    ];
+  _getProducts(){
+    return fetch(`${API}/catalogData.json`)
+          .then(result => result.json())
+          .catch(error => {
+            console.log(error);
+          });
   }
-
+  totalGoodsSum(){
+    return this.goods.reduce((acc, value) => acc + value.price, 0);
+  }
   render(){
     const block = document.querySelector(this.container);
     for(let product of this.goods){
@@ -21,57 +28,76 @@ class ProductList {
       block.insertAdjacentHTML("beforeend",item.render());
     }
   }
-
-  totalGoodsSum(){
-    const startValue = 0;
-    return this.goods.reduce((acc, value) => acc + value.price, startValue);
-  }
 }
 
 class ProductItem {
   constructor(product, img = 'img/placeholder.png'){
-    this.title = product.title;
-    this.id = product.id;
+    this.name = product.product_name;
+    this.id = product.id_product;
     this.price = product.price;
     this.img = img;
   }
   render(){
-    return `<div class="product-item">
-                    <img src="${this.img}" alt="${this.title}">
-                    <h3>${this.title}</h3>
-                    <p>$${this.price}</p>
-                    <button class="buy-btn">Купить</button>
-                </div>`;
+    return `<div class="product-item" data-id="${this.id}">
+                <img src="${this.img}" alt="${this.name}">
+                <h3>${this.name}</h3>
+                <p>$${this.price}</p>
+                <button class="buy-btn">Купить</button>
+            </div>`;
   }
 }
 
 let list = new ProductList();
 
-console.log(list.totalGoodsSum());
+//console.log(list.totalGoodsSum());
 
 class CartContent {
-  constructor(container = '.cart', products) {
+  constructor(container = '.cart-preview_content') {
     this.container = container;
-    this.products = products;
+    this.goods = [];
+    this._getContent()
+      .then(data => {
+      this.goods = data.contents;
+      this.render();
+    });
   }
-  addNewProduct() {}
-  removeProduct() {}
-  clearAll() {}
-  updateTotalSum() {}
-  render() {}
+  _getContent() {
+    return fetch(`${API}/getBasket.json`)
+      .then(text => text.json())
+      .catch(error => {
+        console.log(error);
+      });
+  }
+  render() {
+    const itemsWrapper = document.querySelector(this.container);
+    for(let product of this.goods) {
+      const productNew = new ProductInCart(product);
+      itemsWrapper.insertAdjacentHTML('beforeend', productNew.render());
+    }
+  }
+  // totalGoodsSum(){
+  //   return this.goods.reduce((acc, value) => acc + value.price, 0);
+  // }
 }
 
 class ProductInCart {
-  constructor(id, img, title, price) {
-    this.id = id;
+  constructor(product, img = 'img/placeholder.png') {
+    this.id = product.id_product;
     this.img = img;
-    this.title = title;
-    this.price = price;
-    this.updateQuantity();
+    this.name = product.product_name;
+    this.price = product.price;
+    this.qty = product.quantity;
   }
 
-  updateQuantity() {
-
+  render() {
+    return `<div class="cart-item" data-id="${this.id}">
+                <img src="${this.img}" alt="${this.name}">
+                <span class="cart-item_name">${this.name}</span>
+                <span class="cart-item_price">${this.price * this.qty}$</span>
+                <span class="cart-item_qty">${this.qty}шт.</span>
+                <span class="remove_btn" title="Удалить">X</span>
+            </div>`;
   }
 }
 
+new CartContent();
