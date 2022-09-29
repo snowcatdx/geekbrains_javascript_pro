@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Интернет-магазин</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+<div id="app">
+  <header>
+    <input type="text" placeholder="Начни вводить текст для поиска..." class="filter-input" v-model="userSearch"
+           @input="filterProduct()">
+
+    <div class="cart-preview" :class="{ visible: cartIsVisible }">
+      <button class="btn-cart" type="button" @click="openCart()">
+        <span class="btn-cart_counter">{{ cart.length }}</span>
+        <span>Корзина</span>
+      </button>
+      <div class="cart-preview_content">
+        <p v-if="!cart.length" style="text-align: center">Корзина пуста :(</p>
+
+        <div v-else>
+          <div class="cart-item" v-for="item of cart">
+            <img :src="imgPlaceholder" :alt="item.product_name">
+            <span class="cart-item_name">{{ item.product_name }}</span>
+            <strong class="cart-item_price">{{ item.price }}$</strong>
+            <span class="cart-item_qty"> - {{ item.qty }}шт. - </span>
+            <strong>Всего: {{ item.price * item.qty }}$</strong>
+            <span class="remove_btn" @click="removeProduct(item)"><i class="fa-solid fa-trash"></i></span>
+          </div>
+          <span class="total-sum">Итого: {{ cartTotal }}$</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+      <h1>Каталог</h1>
+      <div class="products">
+        <div class="product-item" v-for="item of filtered">
+          <img :src="imgPlaceholder" :alt="item.product_name">
+          <h3>{{ item.product_name }}</h3>
+          <p>{{ item.price }}$</p>
+          <button class="buy-btn" @click="addProduct(item)">Купить</button>
+        </div>
+      </div>
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+<script src="js/main-vue.js"></script>
+</body>
+
+</html>
