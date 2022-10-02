@@ -11,6 +11,7 @@ const app = new Vue({
     cartIsVisible: false,
     cartTotal: '',
     userSearch: '',
+    error: false
   },
   mounted(){
     this.getJson(API + this.catalogUrl)
@@ -34,6 +35,7 @@ const app = new Vue({
         .then(result => result.json())
         .catch(error => {
           console.log(error);
+          this.error = true
         })
     },
     filterProduct(){
