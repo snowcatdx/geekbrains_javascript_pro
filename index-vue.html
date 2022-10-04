@@ -11,10 +11,9 @@
 
 <body>
 <div id="app">
+  <url-error :error="error"></url-error>
   <header>
-    <input type="text" placeholder="Начни вводить текст для поиска..." class="filter-input" v-model="userSearch"
-           @input="filterProduct()">
-
+    <search></search>
     <div class="cart-preview" :class="{ visible: cartIsVisible }">
       <button class="btn-cart" type="button" @click="openCart()">
         <span class="btn-cart_counter">{{ cart.length }}</span>
@@ -39,17 +38,15 @@
   </header>
   <main>
       <h1>Каталог</h1>
-      <div class="products">
-        <div class="product-item" v-for="item of filtered">
-          <img :src="imgPlaceholder" :alt="item.product_name">
-          <h3>{{ item.product_name }}</h3>
-          <p>{{ item.price }}$</p>
-          <button class="buy-btn" @click="addProduct(item)">Купить</button>
-        </div>
-      </div>
+      <products :products="filtered" :img="imgPlaceholder" @addToCart="addProduct"></products>
+
   </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+<script src="js/comp_search.js"></script>
+<script src="js/comp_catalog.js"></script>
+<script src="js/comp_error.js"></script>
+<!--<script src="js/comp_cart.js"></script>-->
 <script src="js/main-vue.js"></script>
 </body>
 
