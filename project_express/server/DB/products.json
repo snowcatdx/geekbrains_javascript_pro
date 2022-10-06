@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "img": "man2.jpg",
+    "title": "Модная синяя куртка (мужская)",
+    "price": 2500,
+    "currency": "$"
+  },
+  {
+    "id": 3,
+    "img": "man3.jpg",
+    "title": "Полосатый худи (мужской)",
+    "price": 1500,
+    "currency": "$"
+  },
+  {
+    "id": 4,
+    "img": "man4.jpg",
+    "title": "Желтые штанцы (два раза Ку!)",
+    "price": 1800,
+    "currency": "$"
+  },
+  {
+    "id": 5,
+    "img": "women1.jpg",
+    "title": "Черный костюм (женский)",
+    "price": 3700,
+    "currency": "$"
+  },
+  {
+    "id": 6,
+    "img": "women2.jpg",
+    "title": "Голубой пиджак (женский)",
+    "price": 1700,
+    "currency": "$"
+  },
+  {
+    "id": 7,
+    "img": "women3.jpg",
+    "title": "Стильная рубашка (женская)",
+    "price": 1350,
+    "currency": "$"
+  }
+]

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header d-flex align-items-center">
+        <div class="container-xl">
+          <div class="row g-0">
+            <div class="col-auto d-flex">
+              <a href="/" class="header__logo">
+                <img
+                  src="../assets/img/elements/logo.png"
+                  alt="Company name"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+
+            <div class="col d-flex">
+              <form
+                action="#"
+                class="header__search-form d-flex align-items-center"
+              >
+                <button type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" placeholder="Search..." />
+              </form>
+            </div>
+
+            <div class="col-auto d-flex">
+              <div class="header__menu d-flex align-items-center">
+                <i class="fa-solid fa-bars"></i>
+
+                <nav class="header__menu--hidden">
+                  <i class="fa-solid fa-xmark close-btn"></i>
+
+                  <span class="title">MENU</span>
+
+                  <ul class="menu-list">
+                    <li class="menu-list__item menu-list__item--title">
+                      <span>MAN</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Accessories</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Bags</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Denim</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">T-Shirts</a>
+                    </li>
+
+                    <li class="menu-list__item menu-list__item--title">
+                      <span>WOMAN</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Accessories</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Jackets & Coats</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Polos</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">T-Shirts</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Shirts</a>
+                    </li>
+
+                    <li class="menu-list__item menu-list__item--title">
+                      <span>KIDS</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Accessories</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Jackets & Coats</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Polos</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">T-Shirts</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Shirts</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Bags</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-auto d-flex">
+              <a
+                href="../registration.html"
+                class="header__account d-flex align-items-center"
+              >
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </div>
+
+            <div class="col-auto d-flex">
+              <a
+                href="../cart.html"
+                class="header__cart d-flex align-items-center"
+              >
+                <i class="fa-solid fa-cart-shopping">
+                  <span class="counter">5</span>
+                </i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="page-container product-detail-page">
+        <div class="page-title-wrapper d-flex align-items-center">
+          <div
+            class="container-xl d-flex flex-column flex-sm-row justify-content-between align-items-center"
+          >
+            <div class="page-title">
+              <h1>NEW ARRIVALS</h1>
+            </div>
+
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">MEN</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  NEW ARRIVALS
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="container-xl">
+          <div class="catalog-menu row">
+            <div class="col-2 col-lg-4">
+              <div class="catalog-menu__filter">
+                <span class="title open-filter-btn">FILTER</span>
+                <ul class="catalog-menu__filter__dropdown">
+                  <li class="item title">
+                    <span>CATEGORY</span>
+                  </li>
+
+                  <li class="item">
+                    <a href="#">Accessories</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Bags</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Denim</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Hoodies & Sweatshirts</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Jackets & Coats</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Polos</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Shirts</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Shoes</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Sweaters & Knits</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">T-Shirts</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Tanks</a>
+                  </li>
+
+                  <li class="item title">
+                    <span>BRAND</span>
+                  </li>
+
+                  <li class="item title">
+                    <span>DESIGNER</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col col-lg-8 d-flex justify-content-end justify-content-md-start"
+            >
+              <div class="catalog-menu__select">
+                <span class="select-title"
+                  >TRENDING NOW<i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+
+              <div class="catalog-menu__select">
+                <span class="select-title"
+                  >SIZE<i class="fa-solid fa-chevron-down"></i
+                ></span>
+                <ul class="select-dropdown">
+                  <li class="item">
+                    <label>
+                      <input type="checkbox" name="size" />
+                      XS
+                    </label>
+                  </li>
+
+                  <li class="item">
+                    <label>
+                      <input type="checkbox" name="size" />
+                      S
+                    </label>
+                  </li>
+
+                  <li class="item">
+                    <label>
+                      <input type="checkbox" name="size" />
+                      M
+                    </label>
+                  </li>
+
+                  <li class="item">
+                    <label>
+                      <input type="checkbox" name="size" />
+                      L
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="catalog-menu__select">
+                <span class="select-title"
+                  >PRICE<i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog-content">
+          <div class="container-xl">
+            <div class="row">
+              <div class="col-md-6 col-xl-4">
+                <div class="product-card">
+                  <div class="product-card_img">
+                    <div class="overlay">
+                      <button type="button" class="product-card_btn">
+                        Add to Cart
+                      </button>
+                    </div>
+                    <img
+                      src="../assets/img/content/man2.jpg"
+                      alt="Man"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <a href="catalog/detail.html" class="product-card_descr">
+                    <span class="title"> ELLERY X M'O CAPSULE </span>
+                    <p>
+                      Known for her sculptural takes on traditional tailoring,
+                      Australian arbiter of cool Kym Ellery teams up with Moda
+                      Operandi.
+                    </p>
+                    <span class="price">$52.00</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <div class="product-card">
+                  <div class="product-card_img">
+                    <div class="overlay">
+                      <button type="button" class="product-card_btn">
+                        Add to Cart
+                      </button>
+                    </div>
+                    <img
+                      src="../assets/img/content/women1.jpg"
+                      alt="Man"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <a href="catalog/detail.html" class="product-card_descr">
+                    <span class="title"> ELLERY X M'O CAPSULE </span>
+                    <p>
+                      Known for her sculptural takes on traditional tailoring,
+                      Australian arbiter of cool Kym Ellery teams up with Moda
+                      Operandi.
+                    </p>
+                    <span class="price">$52.00</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <div class="product-card">
+                  <div class="product-card_img">
+                    <div class="overlay">
+                      <button type="button" class="product-card_btn">
+                        Add to Cart
+                      </button>
+                    </div>
+                    <img
+                      src="../assets/img/content/man3.jpg"
+                      alt="Man"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <a href="catalog/detail.html" class="product-card_descr">
+                    <span class="title"> ELLERY X M'O CAPSULE </span>
+                    <p>
+                      Known for her sculptural takes on traditional tailoring,
+                      Australian arbiter of cool Kym Ellery teams up with Moda
+                      Operandi.
+                    </p>
+                    <span class="price">$52.00</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <div class="product-card">
+                  <div class="product-card_img">
+                    <div class="overlay">
+                      <button type="button" class="product-card_btn">
+                        Add to Cart
+                      </button>
+                    </div>
+                    <img
+                      src="../assets/img/content/man4.jpg"
+                      alt="Man"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <a href="catalog/detail.html" class="product-card_descr">
+                    <span class="title"> ELLERY X M'O CAPSULE </span>
+                    <p>
+                      Known for her sculptural takes on traditional tailoring,
+                      Australian arbiter of cool Kym Ellery teams up with Moda
+                      Operandi.
+                    </p>
+                    <span class="price">$52.00</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <div class="product-card">
+                  <div class="product-card_img">
+                    <div class="overlay">
+                      <button type="button" class="product-card_btn">
+                        Add to Cart
+                      </button>
+                    </div>
+                    <img
+                      src="../assets/img/content/man4.jpg"
+                      alt="Man"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <a href="catalog/detail.html" class="product-card_descr">
+                    <span class="title"> ELLERY X M'O CAPSULE </span>
+                    <p>
+                      Known for her sculptural takes on traditional tailoring,
+                      Australian arbiter of cool Kym Ellery teams up with Moda
+                      Operandi.
+                    </p>
+                    <span class="price">$52.00</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <div class="product-card">
+                  <div class="product-card_img">
+                    <div class="overlay">
+                      <button type="button" class="product-card_btn">
+                        Add to Cart
+                      </button>
+                    </div>
+                    <img
+                      src="../assets/img/content/women2.jpg"
+                      alt="Man"
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <a href="catalog/detail.html" class="product-card_descr">
+                    <span class="title"> ELLERY X M'O CAPSULE </span>
+                    <p>
+                      Known for her sculptural takes on traditional tailoring,
+                      Australian arbiter of cool Kym Ellery teams up with Moda
+                      Operandi.
+                    </p>
+                    <span class="price">$52.00</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-xl">
+            <nav aria-label="Catalog" class="catalog-pagination">
+              <ul class="catalog-pagination__list">
+                <li class="item prev">
+                  <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                </li>
+                <li class="item active">
+                  <a href="#">1</a>
+                </li>
+                <li class="item">
+                  <a href="#">2</a>
+                </li>
+                <li class="item">
+                  <a href="#">3</a>
+                </li>
+                <li class="item">
+                  <a href="#">4</a>
+                </li>
+                <li class="item">
+                  <a href="#">...</a>
+                </li>
+                <li class="item">
+                  <a href="#">20</a>
+                </li>
+                <li class="item next">
+                  <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer_main">
+          <div class="container-xl">
+            <div class="row">
+              <div class="col-md-6 d-flex justify-content-center">
+                <div class="about-us">
+                  <img src="../assets/img/content/Intersect.png" alt="" />
+                  <p>
+                    “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                    <em>a pulvinar purus condimentum“</em>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-6 d-flex justify-content-center align-items-end"
+              >
+                <div class="subscribe">
+                  <h4>SUBSCRIBE</h4>
+                  <p>FOR OUR NEWLETTER AND PROMOTION</p>
+                  <div class="input-box">
+                    <input
+                      type="text"
+                      class="subscribe_email"
+                      placeholder="Enter Your Email"
+                    />
+                    <button type="submit">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_bottom">
+          <div class="container-xl">
+            <div class="row">
+              <div
+                class="col-sm-6 d-flex justify-content-center justify-content-sm-start align-items-center order-2 order-sm-1"
+              >
+                <span class="copyright">
+                  &copy;2021 Brand All Rights Reserved.
+                </span>
+              </div>
+
+              <div
+                class="col-sm-6 d-flex justify-content-center justify-content-sm-end order-sm-2"
+              >
+                <span class="social-links">
+                  <a href="facebook.com" class="social-links_ico fb"></a>
+                  <a href="instagram.com" class="social-links_ico inst"></a>
+                  <a href="pinterest.com" class="social-links_ico pin"></a>
+                  <a href="twitter.com" class="social-links_ico twit"></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+
+    <script>
+      $(".open-filter-btn").click(function () {
+        $(".catalog-menu__filter").toggleClass("active");
+        $(".catalog-menu__filter__dropdown").fadeToggle();
+      });
+
+      $(".header__menu .fa-bars, .header__menu .close-btn").click(function () {
+        $(".header__menu--hidden").toggleClass("active");
+      });
+    </script>
+  </body>
+</html>
