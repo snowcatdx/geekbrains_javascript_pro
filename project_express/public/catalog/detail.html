@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header d-flex align-items-center">
+        <div class="container-xl">
+          <div class="row g-0">
+            <div class="col-auto d-flex">
+              <a href="index.html" class="header__logo">
+                <img
+                  src="../assets/img/elements/logo.png"
+                  alt="Company name"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+
+            <div class="col d-flex">
+              <form
+                action="#"
+                class="header__search-form d-flex align-items-center"
+              >
+                <button type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" placeholder="Search..." />
+              </form>
+            </div>
+
+            <div class="col-auto d-flex">
+              <div class="header__menu d-flex align-items-center">
+                <i class="fa-solid fa-bars"></i>
+
+                <nav class="header__menu--hidden">
+                  <i class="fa-solid fa-xmark close-btn"></i>
+
+                  <span class="title">MENU</span>
+
+                  <ul class="menu-list">
+                    <li class="menu-list__item menu-list__item--title">
+                      <span>MAN</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Accessories</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Bags</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Denim</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">T-Shirts</a>
+                    </li>
+
+                    <li class="menu-list__item menu-list__item--title">
+                      <span>WOMAN</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Accessories</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Jackets & Coats</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Polos</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">T-Shirts</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Shirts</a>
+                    </li>
+
+                    <li class="menu-list__item menu-list__item--title">
+                      <span>KIDS</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Accessories</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Jackets & Coats</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Polos</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">T-Shirts</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Shirts</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#">Bags</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-auto d-flex">
+              <a
+                href="../registration.html"
+                class="header__account d-flex align-items-center"
+              >
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </div>
+
+            <div class="col-auto d-flex">
+              <a
+                href="../cart.html"
+                class="header__cart d-flex align-items-center"
+              >
+                <i class="fa-solid fa-cart-shopping">
+                  <span class="counter">5</span>
+                </i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="page-container product-detail-page">
+        <div class="page-title-wrapper d-flex align-items-center">
+          <div
+            class="container-xl d-flex flex-column flex-sm-row justify-content-between align-items-center"
+          >
+            <div class="page-title">
+              <h1>NEW ARRIVALS</h1>
+            </div>
+
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">MEN</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  NEW ARRIVALS
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="product-slider">
+          <div class="product-slider__slide">
+            <img
+              src="../assets/img/content/slider-img_1.jpg"
+              alt="Something beautiful"
+              class="img-fluid"
+            />
+          </div>
+          <div class="product-slider__slide">
+            <img
+              src="../assets/img/content/slider-img_1.jpg"
+              alt="Something brilliant"
+              class="img-fluid"
+            />
+          </div>
+          <div class="product-slider__slide">
+            <img
+              src="../assets/img/content/slider-img_1.jpg"
+              alt="Something awesome"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="container-xl">
+          <section
+            class="product-details d-flex flex-column align-items-center justify-content-center"
+          >
+            <span class="product-details__cat">WOMEN COLLECTION</span>
+            <h1 class="product-details__title">MOSCHINO CHEAP AND CHIC</h1>
+            <p class="product-details__descr">
+              Compellingly actualize fully researched processes before proactive
+              outsourcing. Progressively syndicate collaborative architectures
+              before cutting-edge services. Completely visualize parallel core
+              competencies rather than exceptional portals.
+            </p>
+            <span class="product-details__price">$561</span>
+
+            <div class="product-details__control-row">
+              <select class="color-select">
+                <option value="0" selected>CHOOSE COLOR</option>
+                <option value="1">Black</option>
+                <option value="2">White</option>
+                <option value="3">Pink</option>
+              </select>
+
+              <select class="size-select">
+                <option value="0" selected>CHOOSE SIZE</option>
+                <option value="1">S</option>
+                <option value="2">M</option>
+                <option value="3">XXXXL</option>
+              </select>
+
+              <select class="qty-select">
+                <option value="0" selected>QUANTITY</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="product-details__control-row">
+              <button type="button">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+              </button>
+            </div>
+          </section>
+
+          <div class="suggestion-product">
+            <div class="container-xl">
+              <div class="row">
+                <div class="col-sm-6 col-lg-4 mb-3 mb-sm-0">
+                  <div class="product-card">
+                    <div class="product-card_img">
+                      <div class="overlay">
+                        <button type="button" class="product-card_btn">
+                          Add to Cart
+                        </button>
+                      </div>
+                      <img
+                        src="../assets/img/content/manman5.jpg"
+                        alt="Man"
+                        class="img-fluid"
+                      />
+                    </div>
+
+                    <a href="detail.html" class="product-card_descr">
+                      <span class="title"> ELLERY X M'O CAPSULE </span>
+                      <p>
+                        Known for her sculptural takes on traditional tailoring,
+                        Australian arbiter of cool Kym Ellery teams up with Moda
+                        Operandi.
+                      </p>
+                      <span class="price">$52.00</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="product-card">
+                    <div class="product-card_img">
+                      <div class="overlay">
+                        <button type="button" class="product-card_btn">
+                          Add to Cart
+                        </button>
+                      </div>
+                      <img
+                        src="../assets/img/content/okey.jpg"
+                        alt="Man"
+                        class="img-fluid"
+                      />
+                    </div>
+
+                    <a href="detail.html" class="product-card_descr">
+                      <span class="title"> ELLERY X M'O CAPSULE </span>
+                      <p>
+                        Known for her sculptural takes on traditional tailoring,
+                        Australian arbiter of cool Kym Ellery teams up with Moda
+                        Operandi.
+                      </p>
+                      <span class="price">$52.00</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="d-none d-lg-block col-lg-4">
+                  <div class="product-card">
+                    <div class="product-card_img">
+                      <div class="overlay">
+                        <button type="button" class="product-card_btn">
+                          Add to Cart
+                        </button>
+                      </div>
+                      <img
+                        src="../assets/img/content/manman56.jpg"
+                        alt="Man"
+                        class="img-fluid"
+                      />
+                    </div>
+
+                    <a href="detail.html" class="product-card_descr">
+                      <span class="title"> ELLERY X M'O CAPSULE </span>
+                      <p>
+                        Known for her sculptural takes on traditional tailoring,
+                        Australian arbiter of cool Kym Ellery teams up with Moda
+                        Operandi.
+                      </p>
+                      <span class="price">$52.00</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer_main">
+          <div class="container-xl">
+            <div class="row">
+              <div class="col-md-6 d-flex justify-content-center">
+                <div class="about-us">
+                  <img src="../assets/img/content/Intersect.png" alt="" />
+                  <p>
+                    “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                    <em>a pulvinar purus condimentum“</em>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-6 d-flex justify-content-center align-items-end"
+              >
+                <div class="subscribe">
+                  <h4>SUBSCRIBE</h4>
+                  <p>FOR OUR NEWLETTER AND PROMOTION</p>
+                  <div class="input-box">
+                    <input
+                      type="text"
+                      class="subscribe_email"
+                      placeholder="Enter Your Email"
+                    />
+                    <button type="submit">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_bottom">
+          <div class="container-xl">
+            <div class="row">
+              <div
+                class="col-sm-6 d-flex justify-content-center justify-content-sm-start align-items-center order-2 order-sm-1"
+              >
+                <span class="copyright">
+                  &copy;2021 Brand All Rights Reserved.
+                </span>
+              </div>
+
+              <div
+                class="col-sm-6 d-flex justify-content-center justify-content-sm-end order-sm-2"
+              >
+                <span class="social-links">
+                  <a href="facebook.com" class="social-links_ico fb"></a>
+                  <a href="instagram.com" class="social-links_ico inst"></a>
+                  <a href="pinterest.com" class="social-links_ico pin"></a>
+                  <a href="twitter.com" class="social-links_ico twit"></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+    <script>
+      $(".header__menu .fa-bars, .header__menu .close-btn").click(function () {
+        $(".header__menu--hidden").toggleClass("active");
+      });
+
+      var slider = tns({
+        container: ".product-slider",
+        items: 1,
+        slideBy: "page",
+        autoplay: false,
+        nav: false,
+        gutter: 0,
+        controlsText: [
+          '<i class="fa-solid fa-angle-left"></i>',
+          '<i class="fa-solid fa-angle-right"></i>',
+        ],
+      });
+    </script>
+  </body>
+</html>
